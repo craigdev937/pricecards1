@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Peralta&display=swap');
 
 * {
     padding: 0;
@@ -11,11 +11,11 @@ body {
 }
 
 .banner {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 4rem;
+    font-family: 'Peralta', cursive;
+    font-size: 4.5rem;
     padding: 20px;
     text-align: center;
-    background-color: #92B6B1;
+    background-color: #788AA3;
 }
 
 .container {
@@ -35,8 +35,105 @@ body {
 
 .card {
     width: 300px;
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .6)), 
+    background: linear-gradient(rgba(0, 0, 0, .5), 
+        rgba(0, 0, 0, .6)), 
         url(/images/bg.jpg) center, no-repeat;
     background-size: cover;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    transition: all 0.4s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.8);
+}
+
+.card__header {
+    margin-bottom: 40px;
+}
+
+.card__header h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: #FF8C42;
+    margin: 30px;
+    border-bottom: 1px groove #fff;
+    padding: 10px;
+}
+
+.card__header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    font-weight: 300;
+}
+
+.card__header sup {
+    font-size: 35px;
+}
+
+.card__header span {
+    font-size: 18px;
+}
+
+.card__body {
+    margin-bottom: 60px;    
+}
+
+.card__body li {
+    list-style: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 15px 0;
+}
+
+.card__body i {
+    margin-right: 25px;
+}
+
+.card__body .fa-check {
+    color: #0d683a;
+}
+
+.card__body .fa-times {
+    color: #911832;
+}
+
+.card__footer {
+    margin-bottom: 40px;
+}
+
+.card__footer button {
+    width: 120px;
+    padding: 10px;
+    background-color: #FF8C42;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid #FF8C42;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        height: 100%;
+    }
+
+    .container__wrapper {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin: 50px;
+    }
 }
 
